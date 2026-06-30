@@ -32,8 +32,8 @@ jobs:
         run: yarn run lint
       
       - name: Build
-        env:
-          BASE_URL: ${{ github.event.repository.name }}/
+        # env:
+        #   BASE_URL: ${{ github.event.repository.name }}/
         run: yarn run build
 
       # Pack artifact
