@@ -1,0 +1,802 @@
+@import url('https://fonts.googleapis.com/css2?family=Flow+Rounded&family=Handjet:wght,ELSH@100..900,2&display=swap');
+
+.future-plan-container {
+    position: relative;
+    min-height: 100vh;
+
+    background-image: url('/MICS/BG1.png');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 1rem;
+}
+
+.content-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    z-index: 10;
+}
+
+.paper-container {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.is-variant-1:hover {
+    transform: scale(1) rotate(-2deg) translateY(-5px) translateX(-5px);
+}
+
+.paper-container.is-variant-2 {
+    cursor: default;
+}
+
+/* Các thành phần trang trí */
+.decor {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-family: sans-serif;
+    text-align: center;
+    z-index: 30;
+}
+
+
+.cat-sticker {
+    bottom: -40px;
+    right: -60px;
+    width: 150px;
+    height: 160px;
+    background-image: url('/DECOR/DCLPC4.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.paper-star {
+    top: -40px;
+    left: -40px;
+    width: 150px;
+    height: 150px;
+    background-image: url('/DECOR/DCPaperPunk3.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.paperclip {
+    top: 20px;
+    right: 40px;
+    width: 80px;
+    height: 30px;
+    border: 4px solid #4b5563;
+    border-radius: 15px;
+    z-index: 40;
+}
+
+/* Kiểu dáng giấy Dạng 1 */
+.variant-1-wrapper {
+    position: relative;
+}
+
+.paper-background {
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    background-color: #F8F0E6;
+    transform: rotate(-3deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.variant-1-wrapper .paper-main {
+    position: relative;
+    background-image: url('/MICS/BG3.png');
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 4rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    transform: rotate(1deg);
+    z-index: 20;
+}
+
+/* Kiểu dáng giấy Dạng 2 */
+.variant-2-wrapper {
+    position: relative;
+}
+
+.variant-2-wrapper .paper-main {
+    background-image: url('/MICS/BG3.png');
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 3rem 3rem 3rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    transform: rotate(-2deg);
+    z-index: 20;
+}
+
+/* Text & Typography */
+.title-red {
+    color: #b91c1c;
+    font-family: var(--font-accent);
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.title-black {
+    color: #000;
+    font-family: var(--font-accent);
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    font-style: italic;
+    text-align: center;
+}
+
+.handwritten-text {
+    color: #000;
+    font-family: var(--font-accent);
+    font-size: 1.4rem;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+.unimportant-text {
+    color: #1a1b1c;
+    font-family: 'Flow Rounded', 'Handjet', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+/* Các đường kẻ ngang giả lập text trong Dạng 2 */
+.text-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.line {
+    height: 6px;
+    background-color: #252729;
+    border-radius: 3px;
+}
+
+.line-long {
+    width: 90%;
+}
+
+.line-medium {
+    width: 75%;
+}
+
+.line-short {
+    width: 60%;
+}
+
+/* Nút More */
+.more-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 0.5rem 2rem;
+    background-color: transparent;
+    border: 4px solid #000;
+    border-radius: 20px;
+    font-family: var(--font-accent);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.more-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+
+    .variant-1-wrapper .paper-main,
+    .variant-2-wrapper .paper-main {
+        padding: 2rem;
+    }
+
+    .title-red {
+        font-size: 2rem;
+    }
+
+    .handwritten-text {
+        font-size: 1.2rem;
+    }
+
+    .decor {
+        display: none;
+    }
+}
+
+/*==============================
+            Draftroom
+==============================*/
+
+.draftroom-container {
+    min-height: 100vh;
+    background-color: #DFF6FF;
+    padding: 2rem 0.5rem;
+    font-family: Quicksand, sans-serif;
+    color: #000;
+}
+
+.content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Base Window Styles */
+.retro-window {
+    background-color: #DFF6FF;
+    border: 1px solid #000;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.window-header {
+    height: 24px;
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 4px;
+    background-color: #006ACE;
+}
+
+.window-close {
+    width: 20px;
+    height: 20px;
+    background-color: #73D0FF;
+    border: 1px solid #000;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+}
+
+.window-content {
+    padding: 0;
+    flex-grow: 1;
+}
+
+/* Typography Helpers */
+.pixel-text {
+    font-family: Tiny5, monospace;
+    letter-spacing: 1px;
+}
+
+.bg-dark {
+    background-color: #061E58;
+    border: 8px solid #969696;
+    color: #fff;
+    padding: 4rem 2rem;
+}
+
+.py-10 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+/* Sections */
+.hero-window {
+    padding: 4rem 2rem;
+    background-color: #006ACE;
+    margin-bottom: 2rem;
+    border: 8px solid #969696;
+    color: #fff;
+    box-shadow: inset 4px 4px 0px rgba(0, 0, 0, 0.2), -4px -4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-family: Quicksand, monospace;
+}
+
+.hero-content p {
+    font-size: 1.4rem;
+    font-family: Quicksand, monospace;
+    color: #f0f0f0;
+    font-weight: 500;
+}
+
+.pillars-section {
+    padding: 2rem;
+    background-color: #DFF6FF;
+}
+
+.pillars-intro {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.3;
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.pillar-card {
+    background-color: #006ACE;
+    color: #fff;
+    padding: 1.5rem;
+    border: 2px solid #061E58;
+    text-align: left;
+}
+
+.pillar-card h3 {
+    margin: 0.5r em 0;
+    font-size: 1.5rem;
+}
+
+.pillar-card p {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: #fff;
+}
+
+.placeholder-icon {
+    width: 120px;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.folder {
+    background-image: url('/DECOR/DCPE1.png');
+}
+
+.gamepad {
+    background-image: url('/DECOR/DCPE2.png');
+}
+
+.brain {
+    background-image: url('/DECOR/DCPE3.png');
+}
+
+.two-col-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.csr-text .window-content {
+    padding: 2rem;
+    background-color: #DEF6FE;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.csr-diagram .window-content {
+    width: 100%;
+    height: 250px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: #00000000;
+
+    background-image: url('/MICS/IMGCSR.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    user-select: none;
+}
+
+.rmit-banner h2 {
+    font-size: 4rem;
+    font-weight: normal;
+    margin: 0.5rem 0;
+}
+
+.underline {
+    border-bottom: 4px solid #fff;
+}
+
+.inline-logo {
+    display: inline-flex;
+    width: 90px;
+    height: 90px;
+    color: #fff;
+    font-size: 0.7rem;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+
+    background-image: url('/LOGO/LG8.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Staggered Section */
+.staggered-section {
+    position: relative;
+    min-height: 600px;
+    margin-top: 2rem;
+}
+
+.staggered-box {
+    position: absolute;
+    width: 50%;
+    background-color: #e6f2fa;
+    box-shadow: 10px 10px 0 #a6b8be;
+}
+
+.staggered-box .window-content {
+    padding: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.staggered-box .window-header {
+    background-color: #061E58 !important;
+}
+
+.box-1 {
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.box-2 {
+    top: 80px;
+    right: 10px;
+    z-index: 2;
+    width: 45%;
+}
+
+.box-3 {
+    top: 330px;
+    left: 15px;
+    z-index: 3;
+    width: 55%;
+}
+
+
+.placeholder-mascot {
+    position: absolute;
+    bottom: -50px;
+    right: 5%;
+    width: 300px;
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    text-align: center;
+    z-index: 4;
+
+    background-image: url('/DECOR/DCLPC3.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* =========================================
+   INTERACTIVE TRIGGER SECTION (STICKY SCROLL)
+========================================= */
+.scroll-track {
+    height: 400vh;
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.sticky-viewport {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: -webkit-sticky;
+    background-color: transparent;
+}
+
+.scroll-reminder {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    color: #061E58;
+    letter-spacing: 1px;
+    z-index: 50;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+/* =========================================
+   BASE BANNER WINDOW
+========================================= */
+.investment-banner {
+    width: 75%;
+    max-width: 900px;
+    box-shadow: none;
+}
+
+.investment-banner .bg-dark {
+    background-color: #0B194C;
+    border: none;
+    padding: 6rem 4rem;
+    color: #fff;
+}
+
+.investment-banner h2 {
+    font-size: 4rem;
+    font-weight: normal;
+    margin: 0.5rem 0;
+    font-family: Quicksand, sans-serif;
+}
+
+/* =========================================
+   POPUP WINDOWS (STACKING)
+========================================= */
+.popup-window {
+    position: absolute;
+    border: 1px solid #000;
+    animation: popIn 0.3s ease-out forwards;
+    box-shadow: none;
+}
+
+.popup-window .window-header {
+    background-color: #0B194C !important;
+}
+
+.popup-window .window-close {
+    background-color: #63c5f0;
+    border-left: 1px solid #000;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+}
+
+.popup-window .window-content {
+    padding: 2rem 2.5rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    background-color: #ffffff;
+    color: #000;
+    border-top: 1px solid #000;
+}
+
+.popup-1 {
+    top: 18%;
+    left: 10%;
+    width: 45%;
+    z-index: 10;
+}
+
+.popup-2 {
+    top: 35%;
+    right: 8%;
+    width: 45%;
+    z-index: 11;
+}
+
+.popup-3 {
+    top: 55%;
+    left: 15%;
+    width: 48%;
+    z-index: 12;
+}
+
+/* =========================================
+   FINAL POPUP (POPUP 4)
+========================================= */
+.popup-4 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    width: 60%;
+    max-width: 800px;
+    z-index: 20;
+}
+
+.popup-4 .window-header {
+    background-color: #FFEFDF !important;
+}
+
+.popup-4 .window-close {
+    background-color: #E85C0D !important;
+    color: #000;
+}
+
+.popup-4 .window-content {
+    background-color: #272727;
+    color: #fff;
+    padding: 3rem 4rem;
+    position: relative;
+}
+
+.final-popup-content h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 0;
+    margin-right: 80px;
+}
+
+.right-bottom-logo {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 80px;
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent;
+
+    background-image: url('/LOGO/LG8.png');
+    background-size: cover;
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        margin-top: 20px;
+    }
+
+    to {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+
+/* =========================================
+   RESPONSIVE ADJUSTMENTS
+========================================= */
+@media (max-width: 1024px) {
+    .investment-banner h2 {
+        font-size: 3rem;
+    }
+
+    .popup-window {
+        width: 60%;
+    }
+
+    .rmit-banner h2 {
+        font-size: 3rem;
+    }
+
+    .inline-logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .staggered-section {
+        min-height: 750px;
+    }
+
+    .box-2 {
+        top: 150px;
+    }
+
+    .box-3 {
+        top: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .investment-banner {
+        width: 90%;
+    }
+
+    .investment-banner h2 {
+        font-size: 2rem;
+    }
+
+    .investment-banner .bg-dark {
+        padding: 3rem 2rem;
+    }
+
+    .popup-1,
+    .popup-2,
+    .popup-3,
+    .popup-4 {
+        width: 90% !important;
+        position: absolute;
+        top: 50% !important;
+        left: 50% !important;
+        right: auto !important;
+        transform: translate(-50%, -50%) !important;
+    }
+
+    .rmit-banner h2 {
+        font-size: 2rem;
+    }
+
+    .inline-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .staggered-section {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        min-height: auto;
+    }
+
+    .staggered-box {
+        position: relative;
+        width: 100% !important;
+        box-shadow: 6px 6px 0 #a6b8be;
+    }
+
+    .box-1,
+    .box-2,
+    .box-3 {
+        top: auto;
+        left: auto;
+        right: auto;
+    }
+
+    .placeholder-mascot {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin: 1rem auto 0;
+        width: 250px;
+    }
+}

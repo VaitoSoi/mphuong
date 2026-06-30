@@ -1,0 +1,200 @@
+/* =========================================
+   NAVBAR CONTAINER
+========================================= */
+.navbar-wrapper {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto 40px auto;
+
+  /* Nền giấy nhám của thanh Nav */
+  background-color: #f2ede4;
+  background-image: url('/MICS/BG3.png');
+  /* Cập nhật đường dẫn ảnh nền nhám */
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 20px;
+  padding: 10px 30px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2), inset 0px 0px 5px rgba(255, 255, 255, 0.5);
+
+  /* Cố định Nav trên cùng nếu muốn (bỏ comment để dùng) */
+  /* position: sticky; top: 20px; z-index: 100; */
+}
+
+.navbar-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+
+.navbar-item-container {
+  position: relative;
+}
+
+/* =========================================
+   NAV ITEM (TRẠNG THÁI BÌNH THƯỜNG)
+========================================= */
+.nav-item {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  font-family: var(--font-body), cursive;
+  font-size: 1.2rem;
+  padding: 4px 10px;
+  border-radius: 10px;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+}
+
+.nav-item:hover {
+  transform: scale(1.05);
+}
+
+/* Ẩn ghim ở trạng thái bình thường */
+.nav-item .pin-decor {
+  display: none;
+}
+
+/* =========================================
+   NAV ITEM (TRẠNG THÁI ACTIVE)
+========================================= */
+.nav-item.active {
+  background-color: #F7B84B;
+  /* Màu vàng cam */
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Hiển thị và định vị cái ghim khi Active */
+.nav-item.active .pin-decor {
+  display: block;
+  position: absolute;
+  top: -45px;
+  left: 35%;
+  /* Chỉnh số này để ghim dịch sang trái/phải */
+  width: 60px;
+  aspect-ratio: 1 / 1;
+
+  background-image: url('/DECOR/DCPaperPunk15.png');
+  /* Cập nhật đường dẫn ảnh cái ghim */
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.418));
+  z-index: 10;
+}
+
+/* =========================================
+   NÚT HAMBURGER & OVERLAY (ẨN MẶC ĐỊNH)
+========================================= */
+.mobile-toggle-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #78152B;
+  cursor: pointer;
+  padding: 5px;
+  font-family: sans-serif;
+}
+
+.mobile-overlay {
+  display: none;
+}
+
+/* =========================================
+   RESPONSIVE DÀNH CHO TABLET & MOBILE (<= 850px)
+========================================= */
+@media screen and (max-width: 850px) {
+  .navbar-wrapper {
+    width: fit-content;
+    padding: 10px 15px;
+    margin: 20px;
+    background-color: #ffcb6a;
+    background-image: none;
+
+    position: fixed;
+    top: 0;
+    left: 35px;
+    z-index: 1000;
+    border-radius: 20px;
+  }
+
+  .mobile-toggle-btn {
+    display: block;
+  }
+
+  /* Định dạng danh sách thành Dropdown */
+  .navbar-list {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    transform: translateY(-30px);
+
+    flex-direction: column;
+    width: 250px;
+    padding: 20px 10px;
+    gap: 0;
+
+    background-color: #f2ede4;
+    background-image: url('/MICS/nav-bg-texture.png');
+    background-size: cover;
+    border-radius: 15px;
+    box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.4);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-out;
+  }
+
+  .navbar-list.mobile-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); 
+  }
+
+  .navbar-item-container {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .nav-item {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 1.2rem;
+  }
+
+  .nav-item:hover {
+    transform: none;
+  }
+
+  .nav-item.active .pin-decor {
+    top: 5px;
+    left: 20px;
+    width: 25px;
+    height: 35px;
+  }
+
+  .mobile-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    cursor: pointer;
+  }
+}

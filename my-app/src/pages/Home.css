@@ -1,0 +1,455 @@
+/* =========================================
+   LAYOUT CHÍNH (CHO TRANG CÓ THANH CUỘN)
+========================================= */
+.home-wrapper {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  min-width: 320px;
+  background-size: 90% auto;
+
+  background-color: var(--color-maroon);
+  background-image: url('/MICS/BG1.png');
+  background-size: 90%;
+  background-position: center;
+  background-repeat: repeat;
+
+  display: flex;
+  justify-content: center;
+  padding: 60px 10px 120px 10px;
+}
+
+.paper-stack {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  height: fit-content;
+  /* Giãn theo nội dung bên trong */
+}
+
+.bg-paper-scroll {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+}
+
+.bg-paper-scroll-1 {
+  transform: rotate(-3deg);
+  background-color: #d3c5b4;
+  z-index: 1;
+}
+
+.bg-paper-scroll-2 {
+  transform: rotate(2deg);
+  background-color: #e2d7c8;
+  z-index: 2;
+}
+
+.bg-paper-scroll-3 {
+  transform: rotate(-1deg);
+  background-color: #f5e9d9;
+  z-index: 3;
+}
+
+.main-paper-scroll {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #faf8f2;
+  background-image: url('/MICS/BG3.png');
+
+  background-size: 100% auto;
+  background-repeat: repeat;
+  background-position: center;
+  padding: 80px 10%;
+  z-index: 4;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================================
+   ELEMENTS TRANG TRÍ ABSOLUTE
+========================================= */
+.absolute-decor {
+  position: absolute;
+  z-index: 10;
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.4));
+}
+
+.polaroid-top-left {
+  top: -15px;
+  left: -35px;
+  width: 190px;
+  height: 270px;
+  transform: rotate(-10deg);
+
+  background-image: url('/MICS/IMGPola7.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.star-mid-left {
+  padding: 0;
+  margin: 0;
+  top: -40px;
+  left: -260px;
+  width: 400px;
+  height: 340px;
+  transform: rotate(-15deg);
+
+  background-image: url('/DECOR/DCPaperPunk22.png');
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.star-mid-right {
+  top: 300px;
+  right: -75px;
+  width: 150px;
+  height: 170px;
+  transform: rotate(15deg);
+
+  background-image: url('/DECOR/DCPaperPunk41.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+/* =========================================
+   TYPOGRAPHY & ĐOẠN VĂN
+========================================= */
+.intro-section {
+  position: relative;
+  margin-top: 40px;
+}
+
+.heading-container {
+  position: relative;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.quote-mark {
+  font-size: 5rem;
+  color: var(--color-crimson);
+  position: absolute;
+  line-height: 0;
+}
+
+.quote-left {
+  bottom: 20px;
+  left: 0px;
+  transform: scaleY(-1);
+
+}
+
+.quote-right {
+  top: -20px;
+  right: 10px;
+  transform: scaleY(-1);
+}
+
+.main-heading {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.3;
+  color: #000;
+  display: inline-block;
+  padding: 0 40px;
+}
+
+.body-text p {
+  font-family: var(--font-body);
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #111;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+.body-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================
+   TIMELINE SECTION
+========================================= */
+.timeline-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  /* Khoảng cách dọc giữa các ảnh */
+}
+
+/* Dùng viền đứt đoạn đỏ để giả lập dây mờ mờ trong lúc chưa có SVG thật */
+.timeline-path {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  z-index: 0;
+  border-radius: 50%;
+
+  background-image: url('/DECOR/DCLines.svg');
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.timeline-item {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Căn chỉnh so le trái phải */
+.item-about {
+  justify-content: flex-end;
+  padding-right: 15%;
+}
+
+.item-achievement {
+  justify-content: flex-start;
+  padding-left: 14%;
+}
+
+.item-extracurricular {
+  justify-content: flex-end;
+  padding-right: 10%;
+}
+
+.item-future {
+  justify-content: flex-start;
+  padding-left: 14%;
+  height: 280px;
+}
+
+.item-thankyou {
+  justify-content: flex-end;
+  padding-right: 15%;
+}
+
+/* Size tiêu chuẩn cho các ảnh Polaroid trong Timeline */
+.polaroid-board {
+  width: 240px;
+  aspect-ratio: 240 / 350;
+  height: auto;
+  background-size: contain;
+  background-position: center;
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.658));
+}
+
+.doodle-podium {
+  position: absolute;
+  top: 120px;
+  left: -80px;
+  width: 160px;
+  height: 130px;
+  transform: rotate(-10deg);
+
+  background-image: url('/DECOR/DCBD2.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.doodle-camera {
+  position: absolute;
+  bottom: 70px;
+  right: -60px;
+  width: 100px;
+  height: 100px;
+  transform: rotate(15deg);
+
+  background-image: url('/DECOR/DCBD1.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.doodle-watering {
+  position: absolute;
+  top: -60px;
+  left: 10px;
+  width: 150px;
+  height: 150px;
+  transform: rotate(5deg);
+
+  background-image: url('/DECOR/DCBD3.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.thankyou-text {
+  font-family: var(--font-accent);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #000000;
+  text-decoration: none;
+
+  transform: rotate(-5deg);
+  padding: 10px 10px;
+  padding-top: 90px;
+}
+
+.arrow {
+  position: absolute;
+  top: 170px;
+  right: 350px;
+  width: 70px;
+  height: 70px;
+  transform: rotate(10deg);
+
+  background-image: url('/DECOR/DCA1.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.paper-cat {
+  bottom: -60px;
+  right: -70px;
+  width: 160px;
+  height: 160px;
+
+  background-image: url('/DECOR/DCPaperPunk38.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+/*Phần tử Polaroid */
+.item-about .polaroid-board {
+  transform: rotate(10deg);
+
+  background-image: url('/MICS/IMGPola1.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.item-achievement .polaroid-board {
+  transform: rotate(-4deg);
+
+  background-image: url('/MICS/IMGPola2.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.item-extracurricular .polaroid-board {
+  background-image: url('/MICS/IMGPola5.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.item-future .polaroid-board {
+  transform: rotate(-4deg);
+
+  background-image: url('/MICS/IMGPola6.png');
+  background-size: 95%;
+  background-repeat: no-repeat;
+}
+
+.sticker-thankyou {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  transform: rotate(10deg);
+
+  background-image: url('/DECOR/DCPaperPunk29.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.603));
+}
+
+/* =========================================
+   RESPONSIVE (TABLET & MOBILE)
+========================================= */
+@media screen and (max-width: 877px) {
+  .main-paper-scroll {
+    padding: 60px 5%;
+  }
+
+  .main-heading {
+    font-size: 1.6rem;
+  }
+
+  .quote-mark {
+    font-size: 4rem;
+  }
+
+  .polaroid-top-left {
+    display: none;
+  }
+
+  .star-mid-right {
+    transform: scale(0.55) rotate(5deg);
+    right: -85px;
+  }
+
+  .star-mid-left {
+    display: none;
+  }
+
+  .timeline-path {
+    display: none;
+  }
+
+  .timeline-item {
+    justify-content: center !important;
+    padding: 0 !important;
+    height: auto !important;
+    margin-bottom: 60px;
+  }
+
+  .polaroid-board {
+    width: 180px;
+  }
+
+  .sticker-thankyou {
+    width: 160px;
+    height: 160px;
+  }
+
+  .item-thankyou {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .thankyou-text {
+    transform: rotate(0deg);
+    padding-top: 0px;
+  }
+
+  .doodle-podium {
+    left: -40px;
+    width: 120px;
+    height: 100px;
+  }
+
+  .doodle-camera {
+    right: -10px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .doodle-watering {
+    left: 50px;
+    top: -110px;
+    width: 130px;
+    height: 130px;
+  }
+
+  .paper-cat {
+    display: none;
+  }
+
+  .arrow {
+    display: none;
+  }
+}

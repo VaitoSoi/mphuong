@@ -1,0 +1,213 @@
+.thank-you-container {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 1rem;
+    font-family: var(--font-body);
+
+    background-image: url('/MICS/BG1.png')
+}
+
+.content-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    z-index: 10;
+}
+
+.paper-content {
+    background-image: url('/MICS/BG3.png');
+    background-size: cover;
+    background-position: center;
+
+    color: #000000;
+    padding: 4rem;
+    margin: 20px auto;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.269);
+    position: relative;
+    z-index: 10;
+    transform: rotate(-1deg);
+}
+
+.paper-content h1 {
+    font-size: 1.9rem;
+    font-family: var(--font-heading);
+    text-align: center;
+    color: #222;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.text-content p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 1.25rem;
+}
+
+.spacer {
+    width: 100%;
+    height: 40vh;
+    /* Chiều cao của khoảng trống */
+}
+
+/* Các thành phần trang trí (Elements đặc biệt) */
+.decor-ty {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.321));
+}
+
+.torn-paper {
+    top: -8rem;
+    left: -10rem;
+    width: 20rem;
+    aspect-ratio: 1 / 1;
+
+    background-image: url('DECOR/DCPaperPunk22.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(15deg);
+    z-index: 20;
+}
+
+.star-sticker {
+    top: 30%;
+    right: -10rem;
+    width: 15rem;
+    aspect-ratio: 1 / 1;
+
+    background-image: url('DECOR/DCPaperPunk41.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 20;
+}
+
+.exclamation {
+    bottom: 15rem;
+    left: -7rem;
+    width: 12rem;
+    aspect-ratio: 1 / 2;
+
+    background-image: url('DECOR/DCPaperPunk36.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(-10deg);
+    z-index: 20;
+}
+
+.bear-sticker {
+    bottom: 6rem;
+    left: 0;
+    width: 16rem;
+    aspect-ratio: 1 / 1;
+
+    background-image: url('DECOR/DCPaperPunk29.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    opacity: 0.95;
+    transform: rotate(-20deg);
+    z-index: 20;
+}
+
+.scribble {
+    bottom: 0;
+    left: -6rem;
+    width: 10rem;
+    aspect-ratio: 1 / 1;
+
+    background-image: url('DECOR/DCPaperPunk31.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10;
+}
+
+.envelope {
+    bottom: 2rem;
+    right: -20rem;
+    width: 50rem;
+    aspect-ratio: 1 / 1;
+
+
+    background-image: url('DECOR/DCPaperPunk9.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(20deg);
+    z-index: 10;
+}
+
+.rmit-logo {
+    bottom: 10rem;
+    right: 5rem;
+    width: 15rem;
+    aspect-ratio: 3 / 1;
+
+    background-image: url('LOGO/LG7.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(-5deg);
+    opacity: 0.85;
+    z-index: 30;
+}
+
+.white-doodle {
+    bottom: 16rem;
+    left: 30%;
+    width: 5rem;
+    height: 5rem;
+
+    background-image: url('DECOR/DCPaperPunk23.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(10deg);
+    z-index: 20;
+}
+
+.white-doodle::after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    width: 100%;
+    height: 100%;
+    background-image: url('DECOR/DCPaperPunk23.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(10deg);
+    z-index: 20;
+}
+
+/* Ẩn bớt đồ họa trang trí trên màn hình nhỏ để không đè lên chữ */
+@media (max-width: 768px) {
+    .paper-content {
+        padding: 2rem;
+        transform: rotate(0deg);
+    }
+
+    .decor-ty {
+        display: none;
+    }
+
+    .spacer {
+        display: none;
+    }
+}

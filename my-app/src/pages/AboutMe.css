@@ -1,0 +1,537 @@
+/* =========================================
+   VARIABLES & GLOBAL
+========================================= */
+:root {
+  --bg-grid: #F8EFE6;
+  --bg-textured: #f0ebe1;
+}
+
+.about-wrapper {
+  background-color: var(--color-maroon);
+  background-image: url('/MICS/BG1.png');
+  /* Nền vân đỏ */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 10px 100px 10px;
+  overflow-x: hidden;
+}
+
+/* =========================================
+   SECTION 1: GRID PAPER
+========================================= */
+.grid-paper-section {
+  margin: 40px auto;
+  width: 95%;
+  max-width: 1100px;
+  background-color: var(--bg-grid);
+  /* Tạo nền ô ly */
+  background-image:
+    linear-gradient(#d0d0d0 1px, transparent 1px),
+    linear-gradient(90deg, #d0d0d0 1px, transparent 1px);
+  background-size: 30px 30px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  padding: 60px 50px;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.hero-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.hero-left {
+  flex: 0 0 35%;
+  display: flex;
+  justify-content: center;
+  /* Centers the polaroid group horizontally */
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-name {
+  font-family: var(--font-heading);
+  color: black;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #484848;
+}
+
+.highlight-yellow {
+  background-color: var(--color-light-orange);
+  padding: 2px 5px;
+}
+
+.hero-desc {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.sticky-note {
+  background-image: url('/DECOR/DCPaperPunk14.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.411));
+
+  padding: 20px 30px;
+  transform: rotate(-3deg);
+  width: 450px;
+  height: 300px;
+  font-family: var(--font-accent);
+  font-size: 1.4rem;
+  color: #061E58;
+}
+
+.sticky-note ul {
+  padding: 0;
+  padding-left: 20px;
+  line-height: 1.8;
+  color: #061E58;
+  list-style-position: inside;
+  list-style-type: disc;
+}
+
+.sticky-note-title {
+  font-weight: 500;
+  padding: 5px 0px;
+  padding-left: 10px;
+  color: var(--color-maroon);
+}
+
+.stamp-text {
+  width: 390px;
+  min-height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 50px 45px;
+  box-sizing: border-box;
+
+  font-size: 1.4rem;
+  text-align: center;
+  line-height: 1.2;
+  color: var(--color-maroon);
+  font-family: var(--font-accent);
+  transform: rotate(10deg);
+
+  background-image: url('/DECOR/DCPaperPunk43.png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* =========================================
+   SECTION 2: TEXTURED PAPER (STORY)
+========================================= */
+.textured-paper-section {
+  width: 90%;
+  max-width: 1100px;
+  padding: 80px 60px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+
+  background-image: url('/MICS/BG3.png');
+  background-size: 90%;
+  background-repeat: repeat;
+  background-position: center;
+}
+
+.story-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.story-header h3 {
+  font-size: 1.9rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+  font-family: var(--font-heading);
+  color: #000;
+}
+
+.draft-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  color: var(--color-maroon);
+  font-family: var(--font-heading);
+}
+
+.draft-title {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.line {
+  width: 90%;
+  height: 4px;
+  background-color: var(--color-maroon);
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+/* Grid Layout cho cốt truyện */
+.story-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.story-row {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.text-block {
+  color: #333;
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.image-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.caption {
+  color: #555;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.center-align {
+  justify-content: center;
+}
+
+.align-start {
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.handwritten-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.thinking-char {
+  position: relative !important;
+  flex-shrink: 0;
+  width: 80px;
+  height: 100px;
+
+  background-image: url('/DECOR/DCBD5.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.star-right {
+  position: absolute;
+  right: -20px;
+  top: -110px;
+  width: 110px;
+  height: 110px;
+
+  background-image: url('/DECOR/DCPaperPunk4.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.handwritten-block p {
+  font-family: var(--font-accent);
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: #000000;
+  flex: 1;
+  text-align: center;
+}
+
+.handwriting-arrow {
+  display: inline-block;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.two-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.two-col-grid .col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+/* =========================================
+   Decorative Elements
+========================================= */
+.handwriting-arrow {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  margin-top: 30px;
+
+  font-family: var(--font-accent);
+  font-size: 1.6rem;
+
+  padding-left: 35%;
+  transform: rotate(-5deg);
+  color: #000000;
+}
+
+.handwriting-arrow-only {
+  background-image: url('/DECOR/DCA2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  width: 110px;
+  height: 30px;
+  padding: 0;
+  margin-top: 10px;
+  margin-left: 50%;
+  transform: rotate(10deg);
+}
+
+/* =========================================
+   ASPECT-RATIO LOCKS (QUAN TRỌNG)
+========================================= */
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Khóa tỷ lệ các loại ảnh, width dùng % để co giãn theo cột chứa nó */
+.polaroid-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  width: 90%;
+  max-width: 320px;
+  margin-bottom: 60px;
+  margin-left: -15%;
+  margin-top: -5%;
+  aspect-ratio: 3 / 4;
+
+  background-image: url('/MICS/IMGSelf1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.3));
+}
+
+.polaroid-story {
+  width: 80%;
+  aspect-ratio: 3 / 3.5;
+
+}
+
+.cert-single {
+  width: 95%;
+  aspect-ratio: 1.4 / 1;
+
+  background-image: url('/CERTS/Certs13.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.244);
+}
+
+.cert-double {
+  width: 80%;
+  aspect-ratio: 3 / 2;
+
+  background-image: url('/CERTS/Certs14.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.star-left {
+  position: absolute;
+  left: -20px;
+  width: 150px;
+  height: 150px;
+  background-image: url('/DECOR/DCPaperPunk22.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Các decors absolute */
+.decor {
+  position: absolute;
+  /* background-image set in CSS later */
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.571));
+  z-index: 10;
+}
+
+.tape-decor-top {
+  width: 220px;
+  height: 70px;
+  top: 0px;
+  left: -50px;
+  transform: rotate(-25deg);
+
+  background-image: url('/DECOR/DCPaperPunk37.png');
+  background-size: cover;
+  background-position: contain;
+  background-repeat: no-repeat;
+}
+
+.tape-decor-bottom {
+  width: 220px;
+  height: 70px;
+  bottom: 0px;
+  right: -60px;
+  transform: rotate(-30deg);
+
+  background-image: url('/DECOR/DCPaperPunk37.png');
+  background-size: cover;
+  background-position: contain;
+  background-repeat: no-repeat;
+}
+
+/* =========================================
+   RESPONSIVE (MOBILE)
+========================================= */
+@media screen and (max-width: 850px) {
+
+  .grid-paper-section,
+  .textured-paper-section {
+    margin: 0px auto;
+    padding: 60px 20px;
+  }
+
+  .hero-container,
+  .story-row {
+    flex-direction: column;
+    /* Stack dọc mọi thứ */
+    gap: 30px;
+  }
+
+  .hero-left,
+  .hero-right,
+  .text-block,
+  .image-block {
+    width: 100%;
+    flex: none;
+  }
+
+  /* Đảo ngược thứ tự trên mobile: Chữ trước, Ảnh sau */
+  .reverse-mobile {
+    flex-direction: column-reverse;
+  }
+
+  .two-col-grid {
+    grid-template-columns: 1fr;
+    /* Trả về 1 cột */
+  }
+
+  .polaroid-story {
+    width: 100%;
+    /* Tràn viền trên điện thoại */
+  }
+
+  .stamp-text {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .handwriting-arrow-only {
+    display: none;
+  }
+
+  .handwriting-arrow {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-name {
+    font-size: 2.2rem;
+  }
+
+  .hero-title {
+    font-size: 1.1rem;
+  }
+
+  .sticky-note {
+    width: 300px;
+    height: 220px;
+    padding: 15px 20px;
+    font-size: 0.95rem;
+  }
+
+  .stamp-text {
+    font-size: 1.2rem;
+    padding: 40px 30px;
+  }
+
+  .thinking-char {
+    display: none;
+  }
+}

@@ -1,0 +1,2932 @@
+/* =========================================
+   WRAPPER & CORKBOARD BACKGROUND
+========================================= */
+.ec-container {
+    width: 100vw;
+    min-width: 500px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    background-image: url('/MICS/BG1.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.ec-board-wrapper {
+    width: 95%;
+    height: 90%;
+    position: relative;
+}
+
+.corkboard {
+    width: 100%;
+    height: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    background-image: url('/MICS/BG4.jpg');
+    background-size: cover;
+    background-position: center;
+
+    border: 15px solid #e5c39c;
+    border-radius: 8px;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5), 0 10px 30px rgba(0, 0, 0, 0.6);
+    position: relative;
+    overflow: hidden;
+}
+
+/* =========================================
+   MAIN BOARD ELEMENTS
+========================================= */
+.torn-paper-title {
+    width: 650px;
+    aspect-ratio: 2 / 1;
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 40px;
+    z-index: 10;
+    text-align: center;
+
+    background-image: url('/DECOR/DCPaperPunk45.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.white-note {
+    position: absolute;
+    width: 300px;
+    height: 210px;
+    top: 22%;
+    left: 22%;
+    padding: 20px;
+    background-image: url('/DECOR/DCPaperPunk46.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Caveat', cursive;
+    font-size: 1.8rem;
+    font-weight: bold;
+    z-index: 5;
+}
+
+/* =========================================
+   POLAROIDS
+========================================= */
+.polaroid {
+    position: absolute;
+    padding: 10px 10px 20px 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+}
+
+.polaroid:hover {
+    transform: scale(1.05) rotate(0deg) !important;
+    z-index: 20;
+}
+
+.polaroid-img-placeholder {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    font-family: sans-serif;
+    border-radius: 2px;
+}
+
+.polaroid-caption {
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Caveat', cursive;
+}
+
+.polaroid-caption h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.polaroid-caption p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.polaroid-1 {
+    top: 45%;
+    left: 10%;
+    transform: rotate(-8deg);
+    height: 290px;
+
+
+    background-image: url('/MICS/IMGPola15.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 9;
+}
+
+.polaroid-2 {
+    top: 47%;
+    left: 42%;
+    transform: rotate(8deg);
+    height: 290px;
+
+    background-image: url('/MICS/IMGPola16.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 9;
+}
+
+.polaroid-3 {
+    top: 45%;
+    right: 9%;
+    transform: rotate(3deg);
+    height: 290px;
+    background-image: url('/MICS/IMGPola17.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 9;
+}
+
+/* Dây đỏ kết nối */
+.red-string-svg {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: 80%;
+    height: 200px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Pushpins & Decors */
+.star-decor {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 40px;
+    color: #dc2626;
+}
+
+.sticker {
+    position: absolute;
+    font-family: 'Caveat', cursive;
+    font-weight: bold;
+    color: #333;
+}
+
+.cat-sticker-1 {
+    top: 14%;
+    left: 5%;
+    font-size: 2rem;
+    padding: 0px;
+    aspect-ratio: 1 / 1;
+    width: 150px;
+    background-image: url('/DECOR/DCPaperPunk38.png');
+    background-size: cover;
+    background-position: center;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.354));
+}
+
+.cat-sticker-2 {
+    top: 5%;
+    right: 0;
+    background-image: url('/DECOR/DCPaperPunk19.png');
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 1 / 1;
+    width: 270px;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.354));
+}
+
+.star-sticker-bottom {
+    bottom: 15px;
+    left: 25%;
+    font-size: 3rem;
+    transform: rotate(-15deg);
+
+    background-image: url('/DECOR/DCPaperPunk3.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 1 / 1;
+    width: 160px;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.354));
+}
+
+.stars-sticker-bottom {
+    bottom: 0;
+    right: 0;
+    font-size: 3rem;
+    transform: rotate(50deg);
+
+    background-image: url('/DECOR/DCPaperPunk25.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 1 / 1;
+    width: 250px;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.354));
+
+}
+
+.star-sticker-top {
+    top: 3%;
+    left: 18%;
+    font-size: 3rem;
+    transform: rotate(-30deg);
+
+    background-image: url('/DECOR/DCPaperPunk22.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 1 / 1;
+    width: 120px;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.354));
+}
+
+/* =========================================
+   RESPONSIVE ADJUSTMENTS
+========================================= */
+
+@media (max-width: 1024px) {
+    .torn-paper-title {
+        width: 505px;
+    }
+
+    .white-note {
+        width: 220px;
+        height: 154px;
+        font-size: 1.2rem;
+        top: 20%;
+        left: 20%;
+    }
+
+    .polaroid {
+        width: 170px;
+    }
+
+    .polaroid-1,
+    .polaroid-2,
+    .polaroid-3 {
+        height: 225px;
+    }
+
+    .polaroid-caption h3 {
+        font-size: 1.2rem;
+    }
+
+    .cat-sticker-2 {
+        width: 180px;
+    }
+
+    .cat-sticker-1 {
+        width: 120px;
+    }
+
+    .stars-sticker-bottom {
+        width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ec-board-wrapper {
+        height: 95%;
+    }
+
+    .corkboard {
+        overflow-y: auto !important;
+        scrollbar-width: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 3rem 1rem;
+        gap: 2rem;
+    }
+
+    .torn-paper-title,
+    .white-note,
+    .polaroid {
+        position: relative;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    .torn-paper-title {
+        width: 90%;
+        max-width: 350px;
+        min-height: 200px;
+        height: auto;
+        background-size: 100% 100%;
+        transform: rotate(-2deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .white-note {
+        width: 280px;
+        height: 200px;
+        font-size: 1.6rem;
+        transform: rotate(3deg);
+        background-size: 100% 100%;
+    }
+
+    .polaroid {
+        width: 280px;
+    }
+
+    .polaroid-1,
+    .polaroid-2,
+    .polaroid-3 {
+        height: 360px !important;
+        transform: rotate(0deg) !important;
+    }
+
+    .polaroid-caption h3 {
+        font-size: 1.6rem;
+    }
+
+    .polaroid-caption p {
+        font-size: 1.3rem;
+    }
+
+    .cat-sticker-2 {
+        display: block;
+        width: 220px;
+        height: 220px;
+        transform: rotate(5deg);
+    }
+
+    .stars-sticker-bottom {
+        display: block;
+        width: 180px;
+        height: 180px;
+        transform: rotate(15deg);
+    }
+
+    .red-string-svg,
+    .cat-sticker-1,
+    .star-sticker-top,
+    .star-decor {
+        display: none;
+    }
+}
+
+/* =========================================
+   HORIZONTAL BOARDS (Trang con)
+========================================= */
+.horizontal-board {
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    scrollbar-width: none;
+}
+
+.horizontal-board::-webkit-scrollbar {
+    display: none;
+}
+
+.horizontal-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: max-content;
+    /* Cho phép nội dung kéo dài vô tận theo chiều ngang */
+    padding: 0 5rem;
+    gap: 5rem;
+}
+
+/* =========================================
+   THEME-FITTING BACK BUTTON (SCRAPBOOK STYLE)
+========================================= */
+.back-btn {
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    z-index: 100;
+    padding: 10px 25px 10px 20px;
+
+    /* Giao diện giấy Note vàng */
+    background-color: #fff396;
+    color: #1c1917;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+
+    /* Đổi sang font chữ viết tay */
+    font-family: var(--font-accent), cursive;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: none;
+
+    /* Độ nghiêng và đổ bóng giấy */
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+    transform: rotate(3deg);
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Mũi tên viết tay */
+.back-btn::before {
+    content: "⟵";
+    font-size: 2.2rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+/* Hiệu ứng Hover: Nút thẳng lại và phóng to nhẹ */
+.back-btn:hover {
+    background-color: #fde047;
+    /* Đổi sang vàng đậm hơn */
+    color: #000;
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+.back-btn:hover::before {
+    transform: translateX(-5px);
+}
+
+/* Đính thêm Gim đỏ lên nút */
+.back-btn::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 35px;
+    background-image: url('/DECOR/DCPaperPunk42.png');
+    /* Sử dụng file gim đỏ quen thuộc trong layout */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(1px 3px 4px rgba(0, 0, 0, 0.3));
+    pointer-events: none;
+    /* Tránh cản trở thao tác click */
+}
+
+.panel {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: #fff;
+}
+
+.text-panel h2 {
+    font-family: var(--font-accent), cursive;
+    font-size: 2.5rem;
+    margin: 0;
+    color: #fde047;
+}
+
+.text-panel h3 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.text-panel p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-family: sans-serif;
+}
+
+.center-panel .highlight-banner {
+    background-color: #fef08a;
+    color: #000;
+    padding: 10px 20px;
+    transform: rotate(-2deg);
+    display: inline-block;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.series-panel {
+    flex-direction: row;
+    gap: 20px;
+}
+
+.mockup-post {
+    width: 250px;
+    height: 350px;
+    background-color: #e2e8f0;
+    border: 1px solid #cbd5e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #64748b;
+    font-weight: bold;
+}
+
+.impact-panel {
+    text-align: center;
+}
+
+.impact-panel h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 4rem;
+    color: #fde047;
+}
+
+.impact-panel .stats {
+    display: flex;
+    gap: 40px;
+}
+
+.impact-panel .stats h2 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.warning-bg {
+    color: #fde047;
+}
+
+.warning-text {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 4rem;
+    color: #fbbf24;
+    margin: 0;
+}
+
+/* =========================================
+   AUTO FADING CARD COMPONENT
+========================================= */
+.auto-fading-wrapper {
+    width: 280px;
+    height: 380px;
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+    /* Hỗ trợ hiệu ứng tilt */
+}
+
+/* Kế thừa các góc nghiêng cũ */
+.auto-fading-wrapper.fb-tilt-left {
+    transform: rotate(-5deg);
+}
+
+.auto-fading-wrapper.fb-tilt-right {
+    transform: rotate(5deg);
+}
+
+.auto-fading-wrapper .fade-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f1f5f9;
+    /* Màu nền placeholder */
+    color: #64748b;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+
+    /* Thiết lập fade */
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+
+    /* Thuộc tính render ảnh nền (Dùng khi đã có ảnh thật) */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.auto-fading-wrapper .fade-item.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* =========================================
+   BUOM SPECIFIC HORIZONTAL LAYOUT
+========================================= */
+.buom-layout {
+    display: flex;
+    align-items: center;
+    gap: 15rem;
+    padding: 0 10rem;
+    height: 100%;
+    color: white;
+    font-family: Montserrat, system-ui, -apple-system, sans-serif;
+}
+
+.buom-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.buom-group-intro {
+    display: flex;
+    align-items: center;
+    gap: 6rem; /* Khoảng cách nội bộ giữa 3 thành phần này */
+    flex-shrink: 0;
+}
+
+/* 1. Mở đầu */
+.intro-images {
+    width: 300px;
+    height: 400px;
+}
+
+.placeholder-fb-small {
+    position: absolute;
+    bottom: 0;
+    left: 140px;
+    width: 220px;
+    height: 260px;
+    font-weight: bold;
+
+    background-image: url(/BUOM/IMGBMISC2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.354));
+}
+
+.placeholder-boat {
+    position: absolute;
+    top: -120px;
+    left: 0;
+    width: 220px;
+    height: 260px;
+    z-index: 2;
+
+    background-image: url(/BUOM/IMGBMISC3.png);
+    background-size: cover;
+    background-position: center;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.354));
+}
+
+.polaroid-buom-self {
+    position: absolute;
+    top: -120px;
+    left: 0;
+    width: 220px;
+    height: 260px;
+    z-index: 2;
+
+    background-image: url(/BUOM/IMGBMISC4.png);
+    background-size: cover;
+    background-position: center;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.354));
+}
+
+.polaroid-cert-placeholder {
+    width: 150px;
+    height: 150px;
+
+    background-image: url(/DECOR/DCStamp.png);
+    background-size: cover;
+    background-position: center;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.354));
+}
+
+.cert-stamp {
+    position: absolute;
+    top: 140px;
+    left: -80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.cert-stamp p {
+    font-family: mansalva, cursive;
+    color: #fdc947;
+    font-size: 1.8rem;
+    margin: 0;
+    rotate: -5deg;
+}
+
+/* 2 & 3. Typography cho Text Panel */
+
+.text-passion {
+    max-width: 550px;
+}
+
+.text-white-bold-italic {
+    font-size: 3.5rem;
+    font-style: italic;
+    font-weight: 900;
+    margin: 0 0 10px 0;
+    line-height: 1.1;
+
+    color: #FFFBC9;
+}
+
+.text-white-regular {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+    color: #FFFBC9;
+}
+
+/* 4. Certificate */
+.cert-block {
+    width: 240px;
+    align-items: center;
+}
+
+.cert-note {
+    font-family: 'Caveat', cursive;
+    color: #fde047;
+    font-size: 1.8rem;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.placeholder-seal {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: #fde047;
+    border-radius: 50%;
+    color: #000;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+/* 5. Info & Lighthouse */
+.info-lighthouse-block {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.info-content {
+    max-width: 850px;
+    position: relative;
+    margin-top: 55px;
+    z-index: 10;
+}
+
+.project-banner {
+    color: #000;
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    display: inline-block;
+    position: relative;
+}
+
+.role-title {
+    font-size: 2rem;
+    font-weight: 800 !important;
+    margin: 0 0 15px 0;
+}
+
+.info-content p {
+    font-family: Montserrat, system-ui, sans-serif;
+    font-style: italic;
+    font-weight: 800 !important;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin: 0 0 15px 0;
+    font-weight: 500;
+    color: #FFFBC9;
+}
+
+/* =========================================
+   LIGHTHOUSE CSS DRAWING
+========================================= */
+.lighthouse-container {
+    position: relative;
+    width: 180px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 30px;
+}
+
+.lh-base {
+    width: 165px;
+    height: 21px;
+    background-color: #ff5252;
+    z-index: 5;
+}
+
+.lh-body {
+    width: 135px;
+    height: 360px;
+    background-color: #ffffff;
+    clip-path: polygon(25% 0, 75% 0, 100% 100%, 0 100%);
+    position: relative;
+    z-index: 4;
+}
+
+.lh-stripe {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background-color: #0d47a1;
+}
+
+.lh-stripe-1 {
+    top: 22px;
+}
+
+.lh-stripe-2 {
+    top: 157px;
+}
+
+.lh-stripe-3 {
+    bottom: 52px;
+}
+
+.lh-window {
+    position: absolute;
+    top: 60px;
+    width: 18px;
+    height: 42px;
+    background-color: #ff5252;
+}
+
+.lh-window-left {
+    left: 28%;
+}
+
+.lh-window-right {
+    right: 28%;
+}
+
+.lh-door {
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    width: 33px;
+    height: 52px;
+    background-color: #ff5252;
+}
+
+.lh-platform-rail {
+    width: 114px;
+    height: 21px;
+    border-top: 3px solid #0d47a1;
+    border-bottom: 6px solid #ff5252;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 5;
+    background-color: transparent;
+}
+
+.lh-platform-rail::before,
+.lh-platform-rail::after,
+.lh-platform-rail .rail-bar {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 100%;
+    background-color: #0d47a1;
+}
+
+/* Bóng đèn */
+.lh-dome {
+    width: 48px;
+    height: 52px;
+    background-color: #ffeb3b;
+    border-radius: 30px 30px 0 0;
+    z-index: 3;
+    position: relative;
+    box-shadow: 0 0 20px rgba(255, 235, 59, 0.6);
+}
+
+/* Lan can mái */
+.lh-roof-rail {
+    width: 93px;
+    height: 15px;
+    border-top: 3px solid #0d47a1;
+    border-bottom: 3px solid #0d47a1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 5;
+}
+
+.lh-roof-rail::before,
+.lh-roof-rail::after,
+.lh-roof-rail .rail-bar {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 100%;
+    background-color: #0d47a1;
+}
+
+/* Mái đỏ */
+.lh-roof {
+    width: 129px;
+    height: 36px;
+    background-color: #ff5252;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    z-index: 6;
+}
+
+/* Tia sáng vàng */
+.lh-beam {
+    position: absolute;
+    top: 60px;
+    /* Tọa độ mới - Hoàn toàn đồng bộ với margin-top của info-content */
+    right: 90px;
+    /* Tâm của tháp mới */
+    width: 1000px;
+    height: 56px;
+    /* Giữ nguyên chiều cao bằng với khối chữ banner */
+    background-color: #fef08a;
+    clip-path: polygon(0 0, 96% 0, 100% 40%, 100% 60%, 96% 100%, 0 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* 6. Action Text */
+.action-text {
+    max-width: 850px;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+.action-text p {
+    font-family: Montserrat, system-ui, -apple-system, sans-serif;
+    margin: auto;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #FFFBC9;
+}
+
+/* 7 & 8. Series Block */
+.series-block {
+    text-align: center;
+    position: relative;
+}
+
+.series-block h4 {
+    color: #FFFBC9 !important;
+    font-style: italic;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 0 25px 0;
+}
+
+.fb-stack {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.placeholder-fb-large {
+    width: 160px;
+    height: 250px;
+    background: #f1f5f9;
+    color: #64748b;
+    border-radius: 4px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.fb-tilt-left {
+    transform: rotate(-5deg);
+}
+
+.fb-tilt-right {
+    transform: rotate(5deg);
+}
+
+/* 9, 10, 11. Impact Stats */
+.impact-title {
+    font-size: 5rem;
+    font-weight: 800;
+    margin: 0;
+    color: #FFFBC9;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item h2 {
+    font-size: 5rem;
+    font-weight: 800;
+    margin: 0 0 5px 0;
+    color: #FFFBC9;
+}
+
+.stat-item p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Placeholder Stickers / Decors */
+.decor-placeholder {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px dashed #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.cat-face {
+    position: absolute;
+    top: -80px;
+    left: -100px;
+    transform: rotate(-15deg);
+
+    background-image: url('/DECOR/DCPaperPunk38.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 120px;
+    aspect-ratio: 1 / 1;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.354));
+}
+
+.excl-mark {
+    position: absolute;
+    top: 20px;
+    left: -110px;
+    transform: rotate(10deg);
+
+    background-image: url('/DECOR/DCPaperPunk26.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 80px;
+    aspect-ratio: 1 / 1;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.354));
+}
+
+.star-red-top {
+    position: absolute;
+    top: -150px;
+    left: 0;
+    aspect-ratio: 1 / 1;
+    width: 120px;
+    transform: rotate(-10deg);
+
+    background-image: url('/DECOR/DCPaperPunk4.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.354));
+}
+
+.star-ragged-bottom {
+    position: absolute;
+    bottom: -280px;
+    right: -20px;
+    aspect-ratio: 1 / 1;
+    width: 280px;
+    transform: rotate(20deg);
+
+    background-image: url('/DECOR/DCPaperPunk22.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.354));
+}
+
+.chat-bubble {
+    position: absolute;
+    top: -50px;
+    right: -20px;
+    transform: rotate(15deg);
+
+    background-image: url('/DECOR/DCPaperPunk39.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 1 / 1;
+    width: 140px;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.354));
+}
+
+.star-yellow-bottom {
+    position: absolute;
+    bottom: -80px;
+    left: -40px;
+
+    background-image: url('/DECOR/DCPaperPunk3.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 1 / 1;
+    width: 120px;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.354));
+}
+
+.stars-red {
+    position: absolute;
+    bottom: -50px;
+    right: -10px;
+
+    background-image: url('/DECOR/DCPaperPunk47.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 1 / 1;
+    width: 120px;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.354));
+}
+
+.cat-tiny {
+    position: absolute;
+    top: -30px;
+    right: 0;
+
+    background-image: url('/DECOR/DCBD5.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 1 / 1;
+    width: 70px;
+}
+
+.text-lesson {
+    max-width: 700px;
+}
+
+.text-lesson p {
+    font-family: Montserrat, system-ui, -apple-system, sans-serif;
+    font-style: italic;
+    font-size: 2rem;
+    line-height: 1.3;
+    font-weight: 700;
+    color: #FFFBC9;
+}
+
+.text-lesson h2 {
+    font-family: Montserrat, system-ui, -apple-system, sans-serif;
+    font-size: 3rem;
+    line-height: 1.3;
+    font-weight: 800;
+    color: #ffd574;
+}
+
+.spacer-end {
+    min-width: 8rem;
+    height: 1px;
+    flex-shrink: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+/* =========================================
+   MAY BIEC SPECIFIC HORIZONTAL LAYOUT
+========================================= */
+.maybiec-layout {
+    display: flex;
+    align-items: center;
+    gap: 15rem;
+    padding: 0 10rem;
+    height: 100%;
+    color: white;
+    font-family: Montserrat, system-ui, -apple-system, sans-serif;
+}
+
+.mb-block {
+    display: flex;
+    position: relative;
+    flex-shrink: 0;
+    align-items: center;
+}
+
+/* Khối 1: Lời tự sự */
+.reflection-block {
+    max-width: 1200px;
+    gap: 30px;
+    align-items: stretch;
+    justify-content: center;
+    height: 100%;
+}
+
+.mb-left-images {
+    position: relative;
+    width: 300px;
+    height: 100%;
+}
+
+.mb-right-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 300px;
+    height: 100%;
+    margin: auto 0;
+}
+
+.mb-pol-1 {
+    position: absolute;
+    bottom: 30%;
+    left: 0;
+    z-index: 2;
+    width: 250px;
+    height: 300px;
+    background-image: url('/MAYBIEC/IMGMBMISC1.png');
+    background-size: cover;
+    background-position: center;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.354));
+}
+
+.mb-pol-2 {
+    position: absolute;
+    top: 8%;
+    left: 55px;
+    z-index: 1;
+    width: 250px;
+    height: 300px;
+    transform: rotate(-5deg);
+
+    background-image: url('/MAYBIEC/IMGMBMISC2.png');
+    background-size: cover;
+    background-position: center;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.354));
+}
+
+.mb-pol-3 {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    margin-right: 20px;
+
+    background-image: url('/MAYBIEC/IMGMBMISC3.png');
+    background-size: cover;
+    background-position: center;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.354));
+}
+
+.mb-cert {
+
+    position: relative;
+    top: 0;
+    right: -80px;
+}
+
+.reflection-text {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 550px;
+}
+
+/* ĐỒNG BỘ: Sử dụng font chữ, màu sắc và độ nghiêng giống Buồm */
+.mb-small-desc {
+    font-family: Montserrat, system-ui, sans-serif;
+    font-style: italic;
+    font-weight: 800 !important;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #FFFBC9;
+    margin-bottom: 2rem;
+    max-width: 480px;
+}
+
+.mb-huge-title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin: 0 0 10px 0;
+}
+
+.mb-sub-title {
+    font-size: 2.2rem;
+    margin: 0 0 30px 0;
+}
+
+
+.mb-note-adjust {
+    font-size: 1.5rem;
+    transform: rotate(-5deg);
+}
+
+/* Khối 2: Project Info */
+.project-info-block {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 750px;
+    height: 100%;
+    justify-content: center;
+}
+
+.taped-title-wrapper {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.masking-tape {
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    width: 80px;
+    height: 30px;
+    background: rgba(230, 220, 200, 0.8);
+    transform: rotate(-15deg);
+    z-index: 10;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.mb-banner {
+    margin: 0;
+    display: inline-block;
+    background-color: #fef08a;
+    /* Đổi màu nền banner cho giống chuẩn Buồm */
+    color: #000;
+    padding: 10px 20px;
+    clip-path: none;
+    font-size: 2.2rem;
+    font-weight: 900;
+}
+
+/* ĐỒNG BỘ: Đoạn văn Project Info giống Buồm */
+.project-info-block p {
+    font-family: Montserrat, system-ui, sans-serif;
+    font-style: italic;
+    font-weight: 800 !important;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #FFFBC9;
+    margin-bottom: 15px;
+}
+
+/* Khối 3: Gamification */
+/* Khối 3: Gamification Grid Pattern */
+.gamify-block {
+    gap: 40px;
+    align-items: center;
+}
+
+/* Container lưới ảnh */
+.gamify-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    position: relative;
+    width: 360px;
+}
+
+.gamify-img {
+    background-color: #cbd5e1;
+    border: 4px solid #e2e8f0;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.gamify-img-top {
+    grid-column: 1 / 3;
+    /* Căng ngang 2 cột */
+    height: 200px;
+    background-image: url('/MAYBIEC/IMGMB4.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.gamify-img-bottom-left,
+.gamify-img-bottom-right {
+    height: 160px;
+}
+
+.gamify-img-bottom-left {
+    background-image: url('/MAYBIEC/IMGMB2.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: rotate(2deg);
+}
+
+.gamify-img-bottom-right {
+    background-image: url('/MAYBIEC/IMGMB6.JPG');
+    background-size: cover;
+    background-position: center;
+}
+
+.phone-mockup {
+    width: 250px;
+    height: 390px;
+    background: #f1f5f9;
+    border: 4px solid #e2e8f0;
+    transform: rotate(-2deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.3);
+
+    background-image: url('/MAYBIEC/IMGMBPost3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.gamify-text-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.star-red-gamify {
+    position: absolute;
+    top: -35px;
+    left: -35px;
+    width: 90px;
+    height: 90px;
+    background-image: url('/DECOR/DCPaperPunk4.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.354));
+    z-index: 5;
+    transform: rotate(-15deg);
+}
+
+.chat-bubble-gamify {
+    position: absolute;
+    bottom: -90px;
+    right: 20px;
+    width: 110px;
+    height: 110px;
+    background-image: url('/DECOR/DCPaperPunk39.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.354));
+    transform: rotate(5deg);
+}
+
+.mb-narrow-text {
+    font-family: Montserrat, system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #FFFBC9;
+    max-width: 280px;
+}
+
+/* Khối 4: Reading Culture */
+.reading-block {
+    gap: 40px;
+    align-items: center;
+}
+
+/* Bảng infographic lớn ở giữa */
+.reading-infographic {
+    width: 480px;
+    height: 280px;
+    background-color: #fff;
+    border: 8px solid #1e3a8a;
+    /* Viền xanh đậm */
+    border-radius: 12px;
+    box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+}
+
+.infographic-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    background-image: url('/MAYBIEC/IMGMBContest.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Polaroid xanh bên phải */
+.reading-polaroid {
+    position: relative;
+    width: 220px;
+    background-color: #1e3a8a;
+    /* Nền xanh đậm */
+    padding: 12px 12px 20px 12px;
+    box-shadow: 2px 6px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: rotate(2deg);
+    /* Nghiêng nhẹ */
+}
+
+.reading-polaroid-img {
+    width: 100%;
+    height: 170px;
+    background-color: #cbd5e1;
+    background-image: url('/MAYBIEC/IMGMB10.PNG');
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 15px;
+}
+
+.reading-polaroid-text {
+    font-family: var(--font-accent), cursive;
+    color: #fff;
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.1;
+}
+
+/* Khối 5: Magazine */
+.magazine-block {
+    gap: 50px;
+    align-items: center;
+}
+
+/* Kế thừa style chữ đồng bộ nhưng mở rộng độ rộng (max-width) */
+.mb-magazine-text {
+    font-family: Montserrat, system-ui, sans-serif;
+    font-style: italic;
+    font-weight: 700 !important;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #FFFBC9;
+    max-width: 350px;
+}
+
+.magazine-wrapper {
+    position: relative;
+}
+
+.magazine-main-pic {
+    width: 650px;
+    height: 480px;
+    background-image: url('/MAYBIEC/IMGMB15.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 8px solid #e2e8f0;
+    /* Viền trắng xám nhạt như ảnh thật */
+    border-radius: 4px;
+    box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Giấy Note màu hồng */
+.magazine-sticky-note {
+    user-select: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: -20px;
+    left: -40px;
+    background-color: #fbcfe8;
+    /* Màu hồng nhạt */
+    color: #000;
+    padding: 15px 25px;
+    font-family: var(--font-accent), cursive;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.1;
+    transform: rotate(-6deg);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+
+    /* Tạo hiệu ứng góc giấy hơi cong lên */
+    border-bottom-left-radius: 20px 5px;
+    z-index: 5;
+}
+
+/* Gạch chân chữ viết tay */
+.magazine-sticky-note u {
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+/* Ngôi sao trang trí */
+.magazine-decor-star {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 80px;
+    height: 80px;
+    /* Hãy đổi đường dẫn URL này trỏ tới file ảnh sticker ngôi sao bạn có sẵn */
+    background-image: url('/DECOR/DCPaperPunk22.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.3));
+    z-index: 5;
+    transform: rotate(15deg);
+}
+
+/* Khối 6: Truth (ĐỒNG BỘ hoàn toàn với The Impact của Buồm) */
+.truth-container {
+    margin: 0 200px;
+    gap: 500px;
+    align-items: flex-start;
+}
+
+.truth-col {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 400px;
+}
+
+.truth-right {
+    align-items: center;
+    text-align: center;
+    max-width: 700px;
+}
+
+.text-white-bold {
+    font-family: Montserrat, system-ui, sans-serif;
+    color: #FFFBC9;
+    font-weight: 800;
+    font-size: 1.8rem;
+    font-style: italic;
+    margin: 0 0 10px 0;
+}
+
+.text-yellow-bold {
+    font-family: Montserrat, system-ui, sans-serif;
+    color: #ffd574;
+    /* Khớp màu với .text-lesson h2 */
+    font-weight: 900;
+    font-style: italic;
+    margin: 0;
+}
+
+.truth-main {
+    font-size: 3.5rem;
+    line-height: 1.2;
+}
+
+.truth-massive {
+    font-size: 5.5rem;
+    letter-spacing: 2px;
+    margin: 10px 0;
+}
+
+/* Khối 7: End Images (Layout vây quanh text) */
+.end-images-block {
+    position: relative;
+    width: 850px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    flex-shrink: 0;
+}
+
+/* Text trung tâm */
+.mb-final-text {
+    font-family: Montserrat, system-ui, sans-serif;
+    font-style: italic;
+    font-weight: 800 !important;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    color: #FFFBC9;
+    text-align: center;
+    max-width: 440px;
+    z-index: 10;
+    position: relative;
+}
+
+/* Kế thừa chung cho 4 ảnh */
+.mb-final-pic {
+    position: absolute;
+    background-color: #cbd5e1;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease;
+}
+
+/* Ảnh 1: Trên Trái */
+.mb-final-tl {
+    top: 12%;
+    left: -20px;
+    width: 380px;
+    aspect-ratio: 27 / 17;
+    border-radius: 4px;
+    border: 6px solid #e2e8f0;
+    transform: rotate(-5deg);
+    z-index: 5;
+
+    background-image: url('/MAYBIEC/IMGMB14.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Gim đỏ trên ảnh 1 */
+.final-pin {
+    position: absolute;
+    top: -30px;
+    left: 45%;
+
+    background-image: url('/DECOR/DCPaperPunk42.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 60px;
+    aspect-ratio: 1 / 1;
+    z-index: 15;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.354));
+}
+
+/* Ảnh 2: Dưới Trái */
+.mb-final-bl {
+    bottom: 11%;
+    left: 0px;
+    width: 360px;
+    aspect-ratio: 3 / 2;
+    border-radius: 4px;
+    border: 6px solid #e2e8f0;
+    transform: rotate(2deg);
+    z-index: 6;
+
+    background-image: url('/MAYBIEC/IMGMB5.JPG');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Graphic 3: Trên Phải (Logo Mèo xanh) */
+.mb-final-tr {
+    top: 20%;
+    right: 130px;
+    width: 160px;
+    height: 160px;
+    background-color: #559ba5;
+    /* Màu nền xanh cổ vịt */
+    border: 4px solid #3c7d87;
+    border-radius: 4px;
+    transform: rotate(5deg);
+    z-index: 5;
+
+    background-image: url('/LOGO/LG6.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Ảnh 4: Dưới Phải */
+.mb-final-br {
+    bottom: 11%;
+    right: 0;
+    width: 380px;
+    aspect-ratio: 3 / 2;
+    border-radius: 4px;
+    border: 6px solid #e2e8f0;
+    transform: rotate(-5deg);
+    z-index: 6;
+
+    background-image: url('/MAYBIEC/IMGMB12.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Decors Placement cho Khối 7 */
+.final-star-red-right {
+    position: absolute;
+    top: 180px;
+    right: 40px;
+    width: 80px;
+    height: 80px;
+    background-image: url('/DECOR/DCPaperPunk4.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(10deg);
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.3));
+    z-index: 4;
+}
+
+.final-music-note {
+    position: absolute;
+    top: 20%;
+    right: 35%;
+    width: 160px;
+    aspect-ratio: 1 / 1;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.3));
+    background-image: url('/DECOR/DCPaperPunk8.png');
+    /* Đường dẫn nốt nhạc */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(-10deg);
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.3));
+    z-index: 4;
+}
+
+.final-star-red-bottom {
+    position: absolute;
+    bottom: 120px;
+    left: 430px;
+    width: 120px;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.3));
+    aspect-ratio: 1 / 1;
+    background-image: url('/DECOR/DCPaperPunk48.png');
+    /* Đường dẫn sao đỏ */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.3));
+    z-index: 12;
+    /* Đè lên text một chút */
+}
+
+/* Ẩn các class decor cũ không dùng đến trong End Block */
+.mb-end-1,
+.mb-end-2,
+.mb-end-3 {
+    display: none;
+}
+
+/* Decors Placement */
+.star-blue {
+    position: absolute;
+    top: 170px;
+    left: -90px;
+    transform: rotate(10deg);
+
+    background-image: url('/DECOR/DCPaperPunk41.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 1 / 1;
+    width: 150px;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.354));
+}
+
+.headphone-cat {
+    position: absolute;
+    bottom: 55%;
+    right: 20px;
+
+    background-image: url('/LOGO/LG6.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 1 / 1;
+    width: 120px;
+    border-radius: 50%;
+    transform: rotate(-10deg);
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.354));
+}
+
+.star-yellow-mb {
+    bottom: -30px;
+    left: -20px;
+    transform: scale(1.5);
+}
+
+.star-white-mb {
+    top: -30px;
+    left: -20px;
+}
+
+/* =========================================
+   PISE SPECIFIC HORIZONTAL LAYOUT
+========================================= */
+.pise-layout {
+    display: flex;
+    align-items: center;
+    gap: 15rem;
+    /* Tăng khoảng cách giữa các phần nội dung */
+    padding: 0 10rem;
+    /* Thêm lề hai bên để màn hình đầu và cuối có khoảng thở */
+    height: 100%;
+    color: white;
+    font-family: Montserrat, system-ui, -apple-system, sans-serif;
+}
+
+/* Khung hiển thị toàn màn hình cho phần mở đầu */
+.pise-hero-container {
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* Typography Trung tâm */
+.pise-center-title {
+    text-align: center;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pise-center-title h1 {
+    font-size: 4.8rem;
+    font-weight: 900;
+    font-style: italic;
+    margin: 0;
+    color: #fffadc;
+    /* Hiệu ứng bóng cứng (màu nâu đất) kết hợp shadow mờ */
+    text-shadow: 4px 4px 0px #ab814c, 2px 4px 10px rgba(0, 0, 0, 0.5);
+    line-height: 1.1;
+    letter-spacing: 2px;
+}
+
+.pise-center-title h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 10px 0 0 0;
+    color: #fffadc;
+    text-shadow: 3px 3px 0px #ab814c, 2px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Style chung cho 3 bức ảnh */
+.pise-pic {
+    position: absolute;
+    background-color: #cbd5e1;
+    border: 4px solid #f8fafc;
+    box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.3);
+    background-size: cover;
+    background-position: center;
+    z-index: 5;
+}
+
+/* Vị trí ảnh trái */
+.pise-img-left {
+    top: 22%;
+    left: 7%;
+    width: 250px;
+    aspect-ratio: 1.05 / 1;
+    transform: rotate(-8deg);
+    background-image: url('/TRAMTRAU/IMGTTFDay5.jpg');
+    /* Thay link ảnh thực tế */
+}
+
+/* Vị trí ảnh phải trên */
+.pise-img-rt {
+    top: 14%;
+    right: 12%;
+    width: 260px;
+    aspect-ratio: 4 / 3;
+    background-image: url('/TRAMTRAU/IMGTTTProjects1.JPG');
+    /* Thay link ảnh thực tế */
+}
+
+/* Vị trí ảnh phải dưới */
+.pise-img-rb {
+    bottom: 18%;
+    right: 0%;
+    width: 280px;
+    aspect-ratio: 1.1 / 1;
+    transform: rotate(6deg);
+    z-index: 6;
+    /* Đè lên ảnh phải trên */
+    background-image: url('/TRAMTRAU/IMGTTTProjects9.jpg');
+    /* Thay link ảnh thực tế */
+}
+
+/* Tái sử dụng ghim đỏ */
+.pise-pin {
+    position: absolute;
+    top: -25px;
+    width: 50px;
+    height: 50px;
+    background-image: url('/DECOR/DCPaperPunk42.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.354));
+    z-index: 10;
+}
+
+.pise-img-left .pise-pin {
+    left: 40%;
+}
+
+.pise-img-rt .pise-pin {
+    left: 45%;
+}
+
+.pise-img-rb .pise-pin {
+    left: 55%;
+}
+
+/* Sticker ngôi sao bên ảnh phải trên */
+.pise-star-sticker {
+    position: absolute;
+    bottom: -30px;
+    right: -40px;
+    width: 70px;
+    height: 70px;
+    background-image: url('/DECOR/DCPaperPunk33.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.3));
+    z-index: 10;
+    transform: rotate(15deg);
+}
+
+/* PISE - PROJECT INFO BLOCK */
+.pise-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+    height: 100%;
+}
+
+.pise-project-info-block {
+    width: 1200px;
+    align-items: center;
+    text-align: center;
+}
+
+.pise-project-title,
+.pise-project-role {
+    font-family: Montserrat, system-ui, -apple-system, sans-serif;
+    font-size: 3.8rem;
+    font-weight: 900;
+    color: #FFFBC9;
+    /* Màu vàng nhạt đồng bộ với các project khác */
+    margin: 0;
+    line-height: 1.2;
+}
+
+.pise-project-desc {
+    font-family: Montserrat, system-ui, -apple-system, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+/* Các ngôi sao đỏ trang trí */
+.pise-decor-star {
+    position: absolute;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.354));
+}
+
+.pise-star-1 {
+    bottom: 15%;
+    right: 150px;
+    width: 150px;
+    height: 150px;
+    background-image: url('/DECOR/DCPaperPunk4.png');
+    /* Chỉnh URL nếu cần */
+    transform: rotate(-10deg);
+}
+
+.pise-star-2 {
+    bottom: 25%;
+    right: 55px;
+    width: 90px;
+    height: 90px;
+    background-image: url('/DECOR/DCPaperPunk4.png');
+    /* Chỉnh URL nếu cần */
+    transform: rotate(20deg);
+}
+
+/* =========================================
+   PISE - VIDEO BLOCK
+========================================= */
+.pise-video-block {
+    width: 1200px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+}
+
+.pise-video-text h2 {
+    font-family: Montserrat, system-ui, -apple-system, sans-serif;
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #FFFBC9;
+    line-height: 1.3;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.pise-video-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pise-video-placeholder {
+    width: 750px;
+    aspect-ratio: 16 / 9;
+    background-color: #cbd5e1;
+    border-radius: 12px;
+    /* Bo góc mượt như thiết kế */
+    box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.4);
+    /* Đổ bóng sâu */
+
+    /* Cập nhật đường dẫn tới ảnh thumbnail video thực tế của bạn */
+    background-image: url('/PISE/IMGPISE_Video.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Chat bubble sticker */
+.pise-chat-bubble {
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    width: 100px;
+    height: 100px;
+    /* Dùng lại icon chat bubble có sẵn hoặc đổi thành file của bạn */
+    background-image: url('/DECOR/DCPaperPunk39.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.354));
+    z-index: 10;
+}
+
+/* =========================================
+   PISE - TRẠM THẤU BLOCK
+========================================= */
+.pise-tram-thau-block {
+    width: 1200px;
+    height: 100%;
+}
+
+.pise-tt-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Typography trung tâm */
+.pise-tt-text-container {
+    position: relative;
+    max-width: 550px;
+    text-align: center;
+    margin-top: -150px;
+    z-index: 5;
+}
+
+.pise-tt-text-container p {
+    font-family: Montserrat, system-ui, -apple-system, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    font-style: italic;
+    color: #FFFBC9;
+    line-height: 1.4;
+    margin: 0;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.pise-pink-pin {
+    position: absolute;
+    top: -20px;
+    right: 30px;
+    width: 35px;
+    height: 35px;
+    background-image: url('/DECOR/DCPaperPunk42.png');
+    /* Đổi URL sang hình gim hồng nếu có */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.3));
+    transform: rotate(15deg);
+}
+
+.pise-tt-img {
+    position: absolute;
+    background-color: #fff;
+    padding: 0;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+}
+
+.pise-fader {
+    width: 100% !important;
+    height: 100% !important;
+    box-shadow: none !important;
+    transform: none !important;
+    border-radius: 0 !important;
+}
+
+.pise-tab {
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    right: 10px;
+    height: 12px;
+    border-radius: 4px 4px 0 0;
+    z-index: 10;
+}
+
+.pise-tab-left {
+    background: linear-gradient(to bottom, #d32f2f 50%, #fbc02d 50%);
+}
+
+.pise-tab-bottom {
+    background: linear-gradient(to bottom, #fbc02d 50%, #d32f2f 50%);
+}
+
+.pise-tab-right {
+    background: linear-gradient(to bottom, #f57c00 50%, #fbc02d 50%);
+}
+
+/* Vị trí cụ thể của 3 ảnh */
+.pise-tt-left {
+    left: 2%;
+    top: 25%;
+    width: 220px;
+    aspect-ratio: 3 / 4;
+    transform: rotate(-5deg);
+    z-index: 4;
+}
+
+.pise-tt-right {
+    right: 2%;
+    top: 22%;
+    width: 240px;
+    aspect-ratio: 3 / 4;
+    transform: rotate(3deg);
+    z-index: 4;
+}
+
+.pise-tt-bottom {
+    left: 50%;
+    bottom: 15%;
+    width: 300px;
+    aspect-ratio: 4 / 3;
+    transform: translateX(-50%) rotate(2deg);
+    z-index: 6;
+}
+
+/* Stickers */
+.pise-star-ragged {
+    position: absolute;
+    top: 20%;
+    left: -70px;
+    width: 140px;
+    height: 140px;
+    /* Dùng ảnh ngôi sao báo xé của bạn */
+    background-image: url('/DECOR/DCPaperPunk22.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.4));
+    transform: rotate(-10deg);
+    z-index: 5;
+}
+
+.pise-star-face {
+    position: absolute;
+    bottom: -30px;
+    right: -40px;
+    width: 120px;
+    height: 120px;
+    background-image: url('/DECOR/DCPaperPunk3.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.4));
+    transform: rotate(15deg);
+    z-index: 10;
+}
+
+/* PISE - FAILED BLOCK */
+.pise-failed-block {
+    width: 1200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pise-failed-content {
+    display: flex;
+    gap: 50px;
+    position: relative;
+    max-width: 850px;
+    align-items: center;
+}
+
+/* Định dạng cột trái */
+.pise-failed-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pise-failed-left h2 {
+    font-family: Montserrat, system-ui, -apple-system, sans-serif;
+    font-size: 4.8rem;
+    font-weight: 900;
+    font-style: italic;
+    color: #292524;
+    /* Màu đen xám đậm đậm như chữ viết tay */
+    margin: 0 0 15px 0;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.pise-failed-left p {
+    font-family: Montserrat, system-ui, -apple-system, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Định dạng cột phải */
+.pise-failed-right {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pise-failed-right h3 {
+    font-family: Montserrat, system-ui, -apple-system, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    font-style: italic;
+    color: #FFFBC9;
+    margin: 0 0 5px 0;
+}
+
+.pise-failed-right p {
+    font-family: Montserrat, system-ui, -apple-system, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Sticker trang trí cây bút */
+.pise-pen-decor {
+    position: absolute;
+    bottom: -60px;
+    right: -90px;
+    width: 180px;
+    height: 200px;
+    /* Hãy đổi đường dẫn tới file ảnh cây bút của bạn */
+    background-image: url('/DECOR/DCPaperPunk12.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(3px 5px 6px rgba(0, 0, 0, 0.4));
+    transform: rotate(0deg);
+}
+
+/*  PISE - PIVOT & LESSON PLAN BLOCK*/
+.pise-pivot-block {
+    width: 1200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pise-pivot-content {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: relative;
+}
+
+/* --- Giấy Note Có Dòng Kẻ (Trái) --- */
+.pise-note-lined {
+    position: relative;
+    width: 480px;
+    padding: 30px 40px 40px 40px;
+    background-color: #fdfbf7;
+    /* Dùng CSS tạo dòng kẻ: 1 vạch đỏ trên cùng, các vạch xanh bên dưới */
+    background-image:
+        linear-gradient(#a5c3fc 1px, transparent 1px),
+        linear-gradient(#bfdbfe 1px, transparent 1px);
+    background-size: 100% 32px, 100% 32px;
+    background-position: 0 45px, 0 77px;
+    box-shadow: 2px 6px 15px rgba(0, 0, 0, 0.2);
+    transform: rotate(-4deg);
+    z-index: 5;
+    border-radius: 2px;
+}
+
+.pise-note-lined p {
+    font-family: var(--font-accent), cursive;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1c1917;
+    line-height: 32px;
+    /* Phải khớp chính xác với background-size 32px để chữ nằm đúng trên dòng kẻ */
+    margin: 22px 0 0 0;
+    text-align: center;
+}
+
+/* --- Kế Hoạch Bài Giảng (Phải) --- */
+.pise-note-plan {
+    position: relative;
+    width: 300px;
+    height: 380px;
+    padding: 90px 20px 20px 20px;
+    transform: rotate(2deg);
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    background-image: url('/DECOR/DCPaperPunk49.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pise-note-plan:hover {
+    transform: rotate(0deg) scale(1.02) translateY(-5px);
+    z-index: 10;
+}
+
+.pise-note-plan h3 {
+    font-family: var(--font-accent), cursive;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1c1917;
+    text-align: center;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* --- Decors (Kẹp giấy & Ngôi sao) --- */
+.pise-clip {
+    position: absolute;
+    width: 35px;
+    height: 90px;
+    background-image: url('/DECOR/DCClip.png');
+    /* Chỉnh lại đường dẫn file kẹp giấy của bạn */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(2px 4px 3px rgba(0, 0, 0, 0.3));
+}
+
+.pise-clip-left {
+    top: -60px;
+    left: 0px;
+    width: 60px;
+    height: 150px;
+    transform: rotate(-25deg);
+
+    background-image: url('/DECOR/DCPaperPunk50.png');
+}
+
+.pise-blue-star {
+    position: absolute;
+    bottom: -35px;
+    right: 0px;
+    width: 100px;
+    height: 100px;
+    background-image: url('/DECOR/DCPaperPunk32.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.3));
+    transform: rotate(-15deg);
+}
+
+/* =========================================
+   PISE - WORKSHOP BLOCK
+========================================= */
+.pise-workshop-block {
+    width: 1450px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pise-workshop-content {
+    display: flex;
+    gap: 50px;
+    align-items: flex-end;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* --- Text Column --- */
+.pise-workshop-text {
+    position: relative;
+    max-width: 250px;
+    margin-bottom: 10px;
+    /* Aligns baseline with bottom images */
+}
+
+.pise-workshop-text p {
+    font-family: Montserrat, system-ui, -apple-system, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #FFFBC9;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.pise-blue-star-small {
+    position: absolute;
+    top: -50px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    background-image: url('/DECOR/DCBlueStar.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.3));
+    transform: rotate(20deg);
+}
+
+/* --- Gallery Column --- */
+.pise-workshop-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pise-workshop-title {
+    font-family: Montserrat, system-ui, -apple-system, sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #FFFBC9;
+    margin: 0 0 25px 0;
+    position: relative;
+}
+
+.pise-star-clip {
+    position: absolute;
+    bottom: -30px;
+    right: 180px;
+    width: 70px;
+    height: 70px;
+    background-image: url('/DECOR/DCStarClip.png');
+    /* Update to your star paperclip URL */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.3));
+    transform: rotate(-10deg);
+    z-index: 10;
+}
+
+/* --- Staggered Grid Layout --- */
+.pise-grid {
+    display: grid;
+    grid-template-columns: 250px 180px 250px 380px;
+    grid-template-rows: 280px 280px;
+    gap: 25px;
+}
+
+.pise-grid-item {
+    background-color: #cbd5e1;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.pise-img-1 {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    background-image: url('/TRAMTRAU/IMGTTDYOPlan1.jpg');
+}
+
+.pise-img-2 {
+    grid-column: 3 / 4;
+    grid-row: 1;
+    background-image: url('/TRAMTRAU/IMGTTDYOPlan2.jpg');
+}
+
+.pise-img-3 {
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+    background-image: url('/TRAMTRAU/IMGTTDYOPlan3.jpg');
+}
+
+.pise-img-4 {
+    grid-column: 1 / 2;
+    grid-row: 2;
+    background-image: url('/TRAMTRAU/IMGTTDYOPlan4.jpg');
+}
+
+.pise-img-5 {
+    grid-column: 2 / 4;
+    grid-row: 2;
+    background-image: url('/TRAMTRAU/IMGTTDYOPlan5.jpg');
+}
+
+.pise-tiny-stars {
+    position: absolute;
+    bottom: 5px;
+    left: -15px;
+    width: 50px;
+    height: 50px;
+    background-image: url('/DECOR/DCTinyStars.png');
+    /* Update URL */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.3));
+    transform: rotate(-10deg);
+    z-index: 10;
+}
+
+/* =========================================
+   PISE - THE PROJECTS BLOCK
+========================================= */
+.pise-projects-block {
+    width: 1200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Header & Tiêu đề --- */
+.pise-projects-header {
+    position: relative;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.pise-projects-header h2 {
+    font-family: Montserrat, system-ui, -apple-system, sans-serif;
+    font-size: 4.8rem;
+    font-weight: 900;
+    font-style: italic;
+    color: #FFFBC9;
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.pise-red-star-decor {
+    position: absolute;
+    background-image: url('/DECOR/DCPaperPunk4.png');
+    /* File ngôi sao đỏ */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.4));
+}
+
+.pise-star-left {
+    top: -20px;
+    left: -70px;
+    width: 80px;
+    height: 80px;
+    transform: rotate(-15deg);
+}
+
+.pise-star-right {
+    bottom: -15px;
+    right: -60px;
+    width: 55px;
+    height: 55px;
+    transform: rotate(25deg);
+}
+
+/* --- Vùng chứa Card --- */
+.pise-projects-cards {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style chung cho 3 khung ảnh */
+.pise-project-card {
+    position: relative;
+    background-color: #fff;
+    padding: 8px;
+    /* Tạo viền trắng xung quanh ảnh */
+    box-shadow: 2px 6px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 2px;
+}
+
+/* Ảnh Trái (Kích thước dọc) */
+.pise-card-left {
+    width: 260px;
+    height: 350px;
+    transform: rotate(-4deg);
+    z-index: 5;
+}
+
+/* Ảnh Giữa (Kích thước ngang & Hơi hạ thấp xuống) */
+.pise-card-center {
+    width: 360px;
+    height: 250px;
+    transform: translateY(20px);
+    z-index: 6;
+}
+
+/* Ảnh Phải (Kích thước dọc) */
+.pise-card-right {
+    width: 260px;
+    height: 350px;
+    transform: rotate(4deg);
+    z-index: 5;
+}
+
+/* --- Sticker Nốt nhạc --- */
+.pise-music-notes {
+    position: absolute;
+    top: -40px;
+    right: -30px;
+    width: 80px;
+    height: 80px;
+    background-image: url('/DECOR/DCPaperPunk8.png');
+    /* File nốt nhạc */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.4));
+    transform: rotate(10deg);
+    z-index: 15;
+}
+
+/* =========================================
+   PISE - THE LESSON BLOCK
+========================================= */
+.pise-lesson-block {
+    width: 1200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pise-lesson-content {
+    max-width: 790px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
+    /* Đẩy khối text lên một chút cho cân đối với chiều cao màn hình */
+}
+
+.pise-lesson-content h2 {
+    font-family: Montserrat, system-ui, -apple-system, sans-serif;
+    font-size: 4.8rem;
+    font-weight: 900;
+    font-style: italic;
+    color: #FFF799;
+    margin: 0 0 15px 0;
+    line-height: 1.1;
+    letter-spacing: 2px;
+}
+
+.pise-lesson-content p {
+    font-family: Montserrat, system-ui, -apple-system, sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    font-style: italic;
+    color: #FFFBC9;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* =========================================
+   PISE - TEAM BLOCK
+========================================= */
+.pise-team-block {
+    width: 1200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pise-team-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* --- Khối Ảnh --- */
+.pise-team-img-wrapper {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.pise-team-img {
+    width: 650px;
+    aspect-ratio: 3 / 2;
+    background-image: url('/TRAMTRAU/IMGTTDYOPlan16.jpg');
+    /* Cập nhật đường dẫn ảnh thực tế */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    /* Bo góc mượt */
+    box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.35);
+}
+
+.pise-yellow-star {
+    position: absolute;
+    top: -30px;
+    left: -10px;
+    width: 100px;
+    height: 100px;
+    background-image: url('/DECOR/DCPaperPunk34.png');
+    /* File ngôi sao vàng */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.4));
+    transform: rotate(-10deg);
+    z-index: 10;
+}
+
+/* --- Khối Text & Doodle --- */
+.pise-team-text-wrapper {
+    position: relative;
+    text-align: center;
+}
+
+.pise-team-text-wrapper p {
+    font-family: Montserrat, system-ui, -apple-system, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #FFFBC9;
+    margin: 5px 0;
+    line-height: 1.2;
+}
+
+.pise-podium-doodle {
+    position: absolute;
+    bottom: -15px;
+    right: -160px;
+    width: 140px;
+    height: 140px;
+    background-image: url('/DECOR/DCBD2.png');
+    /* File ảnh vẽ bục 1-2-3 */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.3));
+    /* Đổ bóng nhẹ cho nét vẽ */
+    transform: rotate(2deg);
+}

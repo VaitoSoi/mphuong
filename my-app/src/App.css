@@ -1,0 +1,267 @@
+.container {
+  position: relative;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  height: 100vh;
+  background-color: var(--color-maroon);
+  overflow: hidden;
+  z-index: 1;
+  user-select: none;
+
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: url('/MICS/BG1.png');
+  background-size: 90%;
+  background-position: center;
+  background-repeat: repeat;
+
+  filter: blur(1.6px);
+  transform: scale(1.5);
+}
+
+.bg-paper {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 1400px;
+  min-width: 320px;
+  height: 100%;
+}
+
+.bg-paper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 1%;
+  width: 100%;
+  height: 100%;
+
+  background-image: url('/MICS/BG2.png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  filter: blur(3px);
+  z-index: -1;
+}
+
+.main-paper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-3deg);
+  width: 80%;
+  max-width: 850px;
+  min-width: 300px;
+  height: 60%;
+  padding: 10px;
+  background-color: #F5EFE3;
+  background-image: linear-gradient(#d4d0d0 1px, transparent 1px),
+    linear-gradient(90deg, #d4d0d0 1px, transparent 1px);
+  background-size: 40px 40px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.536);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Base styles for all Decors */
+.Decor {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  text-align: center;
+  z-index: 10;
+  cursor: pointer;
+
+  filter:
+    drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.4)) drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.15)) drop-shadow(0px 16px 24px rgba(0, 0, 0, 0.1));
+}
+
+.pin-Decor {
+  top: -120px;
+  left: 55%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 185px;
+
+  background-image: url('/DECOR/DCPaperPunk42.png');
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.clip-Decor {
+  top: 10px;
+  right: -110px;
+  width: 185px;
+  height: 240px;
+  transform: rotate(94deg);
+
+  background-image: url('/DECOR/DCPaperPunk6.png');
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.scribble-Decor {
+  bottom: -50px;
+  left: -60px;
+  width: 210px;
+  height: 210px;
+
+  background-image: url('/DECOR/DCPaperPunk31.png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.polaroid-Decor {
+  bottom: -50px;
+  right: -10px;
+  width: 150px;
+  height: 190px;
+  transform: rotate(10deg);
+
+  background-image: url('/MICS/IMGPola11.png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 4;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+/* Typography elements */
+
+.error-text {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #000;
+}
+
+.courage-text {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #cc0000;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.not-found-text {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-left: 15px;
+  color: #000;
+}
+
+.instruction-text {
+  font-family: var(--font-body);
+  color: #666;
+  margin-top: 30px;
+  font-size: 1.2rem;
+}
+
+/* =========================================
+   RESPONSIVE MEDIA QUERIES
+========================================= */
+
+/* Dành cho Tablet và Laptop nhỏ (Dưới 1024px) */
+@media screen and (max-width: 1024px) {
+
+  .error-text,
+  .courage-text,
+  .not-found-text {
+    font-size: 2.8rem;
+  }
+}
+
+/* Dành cho Điện thoại (Dưới 768px) */
+@media screen and (max-width: 768px) {
+  .main-paper {
+    height: 60%;
+    width: 70%;
+  }
+
+  .content .row {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .bg-paper {
+    transform: translate(-50%, -50%), scale(0.6);
+    height: 80%;
+  }
+
+  .error-text,
+  .courage-text,
+  .not-found-text {
+    font-size: 2rem;
+    margin-left: 5px;
+  }
+
+  .instruction-text {
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+
+  .scribble-Decor {
+    bottom: -50px;
+    transform: scale(0.80);
+  }
+
+  .polaroid-Decor {
+    bottom: -50px;
+    right: -15px;
+    transform: rotate(10deg);
+
+    height: 150px;
+    width: 120px;
+  }
+
+  .clip-Decor {
+    transform: scale(0.7) rotate(94deg);
+  }
+
+  .pin-Decor {
+    top: -100px;
+    transform: translateX(-50%) scale(0.75);
+  }
+}
+
+/* Dành cho Điện thoại màn hình rất nhỏ (Dưới 480px) */
+@media screen and (max-width: 480px) {
+
+  .error-text,
+  .courage-text,
+  .not-found-text {
+    font-size: 1.6rem;
+  }
+}
