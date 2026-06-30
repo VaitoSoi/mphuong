@@ -85,7 +85,7 @@ const Achievement: React.FC = () => {
                     </div>
 
                     <div className="foundation-cards">
-                        <div className="mini-card zoomable2" onClick={() => setZoomedImage('/CERTS/Certs5.jpg')}>
+                        <div className="mini-card zoomable2" onClick={() => setZoomedImage(`${import.meta.env.BASE_URL}CERTS/Certs5.jpg`)}>
                             <div className="icon-box red-box"></div>
                             <div className="card-info">
                                 <h3>IELTS 7.5 Overall</h3>
@@ -93,7 +93,7 @@ const Achievement: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="mini-card zoomable2" onClick={() => setZoomedImage('/CERTS/Certs21.jpg')}>
+                        <div className="mini-card zoomable2" onClick={() => setZoomedImage(`${import.meta.env.BASE_URL}CERTS/Certs21.jpg`)}>
                             <div className="icon-box">
                                 <img src={`${import.meta.env.BASE_URL}MICS/IMGGDDT.png`} alt="Math Logo" />
                             </div>
@@ -141,9 +141,9 @@ const Achievement: React.FC = () => {
                                 <li>Highlight: Showcases sharp business acumen and strategic debate skills.</li>
                             </ul>
                             <div className="card-gallery">
-                                <img src={`${import.meta.env.BASE_URL}MICS/IMGSelf6.jpg`} alt="Gallery" onClick={() => setZoomedImage('/MICS/IMGSelf6.jpg')} style={{ cursor: 'pointer' }} />
-                                <img src={`${import.meta.env.BASE_URL}MICS/IMGSelf4.jpg`} alt="Gallery" onClick={() => setZoomedImage('/MICS/IMGSelf4.jpg')} style={{ cursor: 'pointer' }} />
-                                <img src={`${import.meta.env.BASE_URL}CERTS/Certs12.jpg`} alt="Gallery" onClick={() => setZoomedImage('/CERTS/Certs12.jpg')} style={{ cursor: 'pointer' }} />
+                                <img src={`${import.meta.env.BASE_URL}MICS/IMGSelf6.jpg`} alt="Gallery" onClick={() => setZoomedImage(`${import.meta.env.BASE_URL}MICS/IMGSelf6.jpg`)} style={{ cursor: 'pointer' }} />
+                                <img src={`${import.meta.env.BASE_URL}MICS/IMGSelf4.jpg`} alt="Gallery" onClick={() => setZoomedImage(`${import.meta.env.BASE_URL}MICS/IMGSelf4.jpg`)} style={{ cursor: 'pointer' }} />
+                                <img src={`${import.meta.env.BASE_URL}CERTS/Certs12.jpg`} alt="Gallery" onClick={() => setZoomedImage(`${import.meta.env.BASE_URL}CERTS/Certs12.jpg`)} style={{ cursor: 'pointer' }} />
                             </div>
                         </motion.div>
 
@@ -156,7 +156,7 @@ const Achievement: React.FC = () => {
                             viewport={{ once: true, amount: 0.2 }}
                         >
                             <div className="card-top">
-                                <img src="/LOGO/LG1.png" alt="Wave Vietnam" className="poster-img contain" />
+                                <img src={`${import.meta.env.BASE_URL}LOGO/LG1.png`} alt="Wave Vietnam" className="poster-img contain" />
                                 <div className="card-text">
                                     <h2>3rd Prize, Wave Vietnam Social Innovator <span className="cyan-text">Top 3/30</span></h2>
                                     <blockquote className="quote dark">
@@ -170,8 +170,8 @@ const Achievement: React.FC = () => {
                                 <li>Highlight: A perfect intersection of psychology and Experience Design.</li>
                             </ul>
                             <div className="card-gallery two-cols">
-                                <img src="/CERTS/Certs18.png" alt="Gallery" onClick={() => setZoomedImage('/CERTS/Certs18.png')} style={{ cursor: 'pointer' }} />
-                                <img src="/CERTS/Certs3.jpg" alt="Gallery" onClick={() => setZoomedImage('/CERTS/Certs3.jpg')} style={{ cursor: 'pointer' }} />
+                                <img src={`${import.meta.env.BASE_URL}CERTS/Certs18.png`} alt="Gallery" onClick={() => setZoomedImage(`${import.meta.env.BASE_URL}CERTS/Certs18.png`)} style={{ cursor: 'pointer' }} />
+                                <img src={`${import.meta.env.BASE_URL}CERTS/Certs3.jpg`} alt="Gallery" onClick={() => setZoomedImage(`${import.meta.env.BASE_URL}CERTS/Certs3.jpg`)} style={{ cursor: 'pointer' }} />
                             </div>
                         </motion.div>
 
@@ -184,7 +184,7 @@ const Achievement: React.FC = () => {
                         >
                             <div className="major-card dark-blue tilted">
                                 <div className="card-top">
-                                    <img src="/LOGO/LG3.jpg" alt="Aspiring Vietnam" className="poster-img" />
+                                    <img src={`${import.meta.env.BASE_URL}LOGO/LG3.jpg`} alt="Aspiring Vietnam" className="poster-img" />
                                     <div className="card-text">
                                         <h2>ASPIRING VIETNAM 2024<br />Best of <span className="pink-text">Demo Challenge</span>, Future President Program, Top 128</h2>
                                         <blockquote className="quote">
@@ -205,9 +205,9 @@ const Achievement: React.FC = () => {
                                     </button>
                                 </div>
                                 <div className="card-gallery">
-                                    <img src="/CERTS/Certs1.png" alt="Gallery" style={{ cursor: 'pointer' }} onClick={() => setZoomedImage('/CERTS/Certs1.png')} />
-                                    <img src="/CERTS/Certs2.png" alt="Gallery" style={{ cursor: 'pointer' }} onClick={() => setZoomedImage('/CERTS/Certs2.png')} />
-                                    <img src="/CERTS/Certs20.png" alt="Gallery" style={{ cursor: 'pointer' }} onClick={() => setZoomedImage('/CERTS/Certs20.png')} />
+                                    <img src={`${import.meta.env.BASE_URL}CERTS/Certs1.png`} alt="Gallery" style={{ cursor: 'pointer' }} onClick={() => setZoomedImage(`${import.meta.env.BASE_URL}CERTS/Certs1.png`)} />
+                                    <img src={`${import.meta.env.BASE_URL}CERTS/Certs2.png`} alt="Gallery" style={{ cursor: 'pointer' }} onClick={() => setZoomedImage(`${import.meta.env.BASE_URL}CERTS/Certs2.png`)} />
+                                    <img src={`${import.meta.env.BASE_URL}CERTS/Certs20.png`} alt="Gallery" style={{ cursor: 'pointer' }} onClick={() => setZoomedImage(`${import.meta.env.BASE_URL}CERTS/Certs20.png`)} />
                                 </div>
                             </div>
                         </motion.div>
@@ -288,7 +288,7 @@ const Achievement: React.FC = () => {
 
                         <div className="pdf-container">
                             <object
-                                data={activePdf === 1 ? "/PDF/VEGOProposal.pdf#view=FitH" : "/PDF/VEGOGuidelines.pdf#view=FitH"}
+                                data={activePdf === 1 ? `${import.meta.env.BASE_URL}PDF/VEGOProposal.pdf#view=FitH` : `${import.meta.env.BASE_URL}PDF/VEGOGuidelines.pdf#view=FitH`}
                                 type="application/pdf"
                                 className="pdf-viewer"
                             >
@@ -296,7 +296,7 @@ const Achievement: React.FC = () => {
                                 <div style={{ padding: '20px', textAlign: 'center' }}>
                                     <p style={{ color: '#fff' }}>Your browser does not support viewing PDFs inline.</p>
                                     <a
-                                        href={activePdf === 1 ? "/PDF/VEGOProposal.pdf" : "/PDF/VEGOGuidelines.pdf"}
+                                        href={activePdf === 1 ? `${import.meta.env.BASE_URL}PDF/VEGOProposal.pdf` : `${import.meta.env.BASE_URL}PDF/VEGOGuidelines.pdf`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         style={{ color: '#ff3399', textDecoration: 'underline', fontWeight: 'bold' }}
