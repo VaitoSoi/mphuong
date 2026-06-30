@@ -36,7 +36,7 @@ jobs:
       
       - name: Build
         env:
-          GH_PAGES: true
+          BASE_URL: ${{ github.event.repository.name }}
         run: yarn run build
 
       # Pack artifact
