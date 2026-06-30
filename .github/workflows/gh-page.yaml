@@ -28,7 +28,7 @@ jobs:
       
       # Build
       - name: Lint
-        run: yarn run Lint
+        run: yarn run lint
       
       - name: Build
         run: yarn run build
