@@ -35,6 +35,8 @@ jobs:
         run: yarn run lint
       
       - name: Build
+        env:
+          GH_PAGES: true
         run: yarn run build
 
       # Pack artifact
